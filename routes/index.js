@@ -3,7 +3,9 @@ var mqtt = require('mqtt');
 var router = express.Router();
 var url = require('url');
 
-var mqtt_url = process.env.CLOUDMQTT_URL || 'mqtt://nzhbibzj:TmHplA9TFj1v@m20.cloudmqtt.com:10877';
+//var mqtt_url = process.env.CLOUDMQTT_URL || 'mqtt://nzhbibzj:TmHplA9TFj1v@m20.cloudmqtt.com:10877';
+
+var mqtt_url = process.env.CLOUDMQTT_URL || 'mqtt://localhost:1883';
 var topic = process.env.CLOUDMQTT_TOPIC || 'test/rjk';
 var client = mqtt.connect(mqtt_url);
 
